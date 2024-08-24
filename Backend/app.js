@@ -6,7 +6,6 @@ import session from "express-session";
 import AdminRouter from "./router/AdminRoute.js";
 import cors from "cors";
 const app = express();
-app.use(express.json());
 
 app.use(
   cors({
@@ -16,6 +15,8 @@ app.use(
     credentials: true, // Allows cookies to be sent and received
   })
 );
+
+app.use(express.json());
 
 app.use("/dashboard", dashboardRouter);
 app.use("/analytic", AnalyticRoute);
