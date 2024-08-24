@@ -1,0 +1,26 @@
+#login {
+    user-select: none;
+    height: 100vh;
+    margin-top: 200px;
+}
+
+#login h2 { 
+    text-align:  center;
+    color: green
+}
+#login .btn-success { 
+    margin-top: 10px;
+    color: white;
+    font-size: large;
+}
+
+#login .btn-warning {
+    font-size: large;
+    color: rgb(253, 249, 249);
+    
+}
+
+#login p {
+    text-align: center;
+}
+

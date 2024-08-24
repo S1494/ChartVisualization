@@ -1,0 +1,68 @@
+body {
+    margin : 0;
+    padding : 0;
+    background-color: rgb(241, 239, 239);
+}
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+#dashboard, #table, #analytic {
+    margin-top: 100px;
+    margin-left: 280px;
+}
+
+#piechart, #barchart, #scatterplot, #waterfallchart , #linechart{
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    margin : 10px;
+    padding : 10px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgb(216, 214, 214);
+    user-select: none;
+
+}
+
+#piechart:hover, #barchart:hover, #scatterplot:hover, #waterfallchart:hover ,#linechart:hover{
+    border: 2px solid rgb(226, 223, 223);
+}
+
+#piechart h2, #barchart h2, #scatterplot h2 , #waterfallchart h2 , #linechart h2{
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgb(48, 46, 46);
+}
+
+
+
+@media screen and (max-width : 768px) {
+    .sidebar {
+        width : 120px;
+        transition: width 1s ease;
+        overflow: hidden;
+
+    }
+    .sidebar .open {
+        transform: translateX(0);
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    #header {
+        left: 130px;
+        transition: left 1s ease;
+    }
+    #dashboard > * {
+        flex: 1 1 100% ;
+        max-width: 100%;
+    }
+    #dashboard {
+        margin-left: 120px;
+        transition: left 1s ease;
+    }
+    
+}

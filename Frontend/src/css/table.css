@@ -1,0 +1,11 @@
+#table .container {
+    margin :0
+}
+
+#table td {
+    font-size: 0.8rem;
+}
+
+#table th {
+    font-size: 0.9rem;
+}
