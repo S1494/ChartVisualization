@@ -12,7 +12,7 @@ export function loginGet(req, res) {
 }
 
 export function signupGet(req, res) {
-  res.send("ok login");
+  res.send("ok signup");
 }
 
 //login post
