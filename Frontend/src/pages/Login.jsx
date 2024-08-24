@@ -27,8 +27,8 @@ const Login = () => {
           {
             email,
             password,
-          },
-          { withCredentials: true } //Include cookies in the request
+          }
+          // { withCredentials: true } //Include cookies in the request
         )
         .then((response) => {
           setMessage(response.data.message);
