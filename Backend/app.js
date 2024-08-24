@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://chart-visualization-six.vercel.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Allows cookies to be sent and received
