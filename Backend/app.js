@@ -7,7 +7,9 @@ import cors from "cors";
 const app = express();
 
 app.use(
-  cors()
+  cors({
+    origin: "*",
+  })
   //   {
   //   origin: "https://chart-visualization-six.vercel.app",
   //   methods: ["GET", "POST"],
