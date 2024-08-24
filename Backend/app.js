@@ -2,14 +2,14 @@ import express, { urlencoded } from "express";
 import dashboardRouter from "./router/dashboardRouter.js";
 import AnalyticRoute from "./router/Analyticroute.js";
 import AuthRouter from "./router/authrouter.js";
-import session from "express-session";
 import AdminRouter from "./router/AdminRoute.js";
 import cors from "cors";
 const app = express();
 
 app.use(
   cors({
-    origin: "https://chart-visualization-six.vercel.app",
+    // origin: "https://chart-visualization-six.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Allows cookies to be sent and received
