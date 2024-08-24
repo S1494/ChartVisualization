@@ -8,14 +8,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://chart-visualization-six.vercel.app",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // Allows cookies to be sent and received
   })
-  //   {
-  //   origin: "https://chart-visualization-six.vercel.app",
-  //   methods: ["GET", "POST"],
-  //   allowedHeaders: ["Content-Type", "Authorization"],
-  //   credentials: true, // Allows cookies to be sent and received
-  // }
 );
 
 app.use(express.json());
