@@ -12,7 +12,7 @@ const Table = () => {
             console.log("data fetched", res);
             setData(res.data.message);
           } else {
-            console.log("Unexpected data format", res.data.message);
+            console.log("Unexpected data format", res);
           }
         });
       } catch (error) {
