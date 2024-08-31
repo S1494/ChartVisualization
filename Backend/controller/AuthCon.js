@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 
 dotenv.config();
 
-const jwt_secret = process.env.JWT_SECRET;
+// const jwt_secret = process.env.JWT_SECRET;
 
 export function loginGet(req, res) {
   res.send("ok login");
@@ -40,10 +40,10 @@ export async function loginPost(req, res) {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    const token = jwt.sign({ userId: user.id }, jwt_secret, {
-      expiresIn: "1h",
-    });
-    console.log("Token from login pagee", token);
+    // const token = jwt.sign({ userId: user.id }, jwt_secret, {
+    //   expiresIn: "1h",
+    // });
+    // console.log("Token from login pagee", token);
 
     return res.status(200).json({ message: "Login successful", token });
   } catch (error) {
@@ -93,9 +93,9 @@ export async function signupPost(req, res) {
   }
 }
 
-export function logoutPost(req, res) {
-  req.session.destroy((err) => {
-    if (err) return res.status(500).json({ message: "Error logging out" });
-    return res.status(200).json({ message: "Logged out successfully" });
-  });
-}
+// export function logoutPost(req, res) {
+// req.session.destroy((err) => {
+// if (err) return res.status(500).json({ message: "Error logging out" });
+// return res.status(200).json({ message: "Logged out successfully" });
+// });
+// }
