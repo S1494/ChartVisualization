@@ -31,7 +31,6 @@ function App() {
             <Route path="/auth/signup" element={<Signup />} />
             <Route path="/auth/login" element={<Login />} />
             <Route path="/admin" element={<AdminPanel />} />
-            <Route path="/" element={<Table />} />
             <Route path="*" element={<Navigate to="/dashboard" />} />
           </Routes>
         </Router>
