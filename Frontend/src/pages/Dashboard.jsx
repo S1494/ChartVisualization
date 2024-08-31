@@ -4,7 +4,6 @@ import axios from "axios";
 import { DataContext } from "../contex/DataContext";
 import BarChart from "../components/BarChart";
 import ScatterPlot from "../components/ScatterPlot";
-// import WaterfallChart from "../components/WaterfallChart";
 import LineChart from "../components/LineChart";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
@@ -18,13 +17,14 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = localStorage.getItem("token");
-        console.log("from dashboard", token);
+        // const token = localStorage.getItem("token");
+        // console.log("from dashboard", token);
 
         await axios
-          .get(`${appURL}/dashboard`, {
-            headers: { Authorization: `Bearer ${token}` },
-          })
+          .get(
+            `${appURL}/dashboard`
+            // {headers: { Authorization: `Bearer ${token}` },}
+          )
           .then((response) => {
             if (response.data.redirect) navigate(response.data.redirect);
 
