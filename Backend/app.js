@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://chart-visualization-six.vercel.app",
+    origin: process.env.Client_URL,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Allows cookies to be sent and received
@@ -16,6 +16,8 @@ app.use(
 );
 
 app.use(express.json());
+
+console.log(process.env.Client_URL);
 
 app.use("/dashboard", dashboardRouter);
 app.use("/analytic", AnalyticRoute);
